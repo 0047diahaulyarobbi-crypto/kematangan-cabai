@@ -287,7 +287,7 @@ if uploaded_file is not None:
     col_m2.metric(label="Rasio Kuning", value=f"{yellow:.2f}%")
     col_m3.metric(label="Rasio Merah", value=f"{red:.2f}%")
 
-    st.markdown("<br>**Grafik Kepadatan Nilai Hijau**")
+    st.markdown("**Grafik Kepadatan Nilai Hijau**")
     st.progress(min(int(green), 100))
     st.markdown("**Grafik Kepadatan Nilai Kuning**")
     st.progress(min(int(yellow), 100))
@@ -295,7 +295,7 @@ if uploaded_file is not None:
     st.progress(min(int(red), 100))
 
     # Interpretasi logika ilmiah di bagian paling akhir halaman
-    st.markdown("<br>#### 📖 Interpretasi Logika Ilmiah")
+    st.markdown("📖 Interpretasi Logika Ilmiah")
     if "Matang" in status and "Setengah" not in status and "Belum" not in status:
         penjelasan_status = f"Objek diklasifikasikan sebagai <b>🔴 Matang</b> karena spektrum warna <b>Merah ({red:.2f}%)</b> mendominasi secara mutlak. Secara biologis, klorofil telah terdegradasi sepenuhnya digantikan pigmen karotenoid yang merefleksikan gelombang cahaya merah pada ruang warna HSV."
     elif "Setengah" in status:
